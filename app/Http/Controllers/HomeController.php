@@ -16,21 +16,8 @@ class HomeController extends Controller
     }
     
     public function showPost($id){
-       // if(Auth::user()){
-        $items=Postitem::where('post_id', '=', $id)->get();
-        $item_count=count($items);
-        if($item_count >=1){
-            $item=$items->random(1)->first();
-        }else{
-            $item=$items->first();
-        }
-            $post=Post::whereId($id)->first();
-            return view('show')->with(['post'=>$post, 'item'=>$item, 'item_count'=>$item_count]);
-       // }else{
-          //  return redirect()->route('facebook.login');
-       // }
-
-       
+        
+       return view('show')->with(['post_id'=>$id]);
     }
     
 }

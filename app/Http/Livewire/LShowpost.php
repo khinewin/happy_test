@@ -10,16 +10,19 @@ class LShowpost extends Component
 {
         public $item, $post_id;
      public  $item_count;
-
+    public function mount($id){
+        $this->post_id=$id;
+    }
     
 
     public function doRetry(){
         $items=Postitem::where('post_id', '=', $this->post_id)->get();
+        dd($items);
         $item_count=count($items);
         $this->item_count=$item_count;
         if($item_count >=1){
             $this->item=$items->random(1)->first();
-            Session::put('item', $this->item);
+            session()->flash('img', $this->item->post_item);
         }
        
     }
@@ -31,9 +34,8 @@ class LShowpost extends Component
         $this->item_count=$item_count;
         if($item_count >=1){
             $this->item=$items->random(1)->first();
-            Session::put('item', $this->item);
+            session()->flash('img', $this->item->post_item);
         }
-        /*
         $get_posts=Post::OrderBy('id','desc')->where('ready', '=', true)->paginate(10);
         $count=count($get_posts);
         if($count >= 10){
@@ -42,8 +44,9 @@ class LShowpost extends Component
             $posts=$get_posts;
 
         }
-        */
-        return view('livewire.l-showpost');
+        
+        return view('livewire.l-showpost')->extends('show')->section('my_title', 'Byaw')
+        ->section('my_content')->section('post_id', $this->post_id)->section('img', $this->item->post_item);
     }
     
 }
