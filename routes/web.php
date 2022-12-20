@@ -30,15 +30,19 @@ Route::get('/logout', function(){
 })->name('logout');
 
 Route::group(['prefix'=>'admin'], function(){
-    Route::get('/register',[
-        AuthController::class, 'getRegister'
-    ])->name('register');
+   
+    
     
     Route::get('/login',[
         AuthController::class, 'getLogin'
     ])->name('login');
 });
 
+Route::group(['middleware'=>'auth', 'prefix'=>'admin'], function(){
+    Route::get('/register',[
+        AuthController::class, 'getRegister'
+    ])->name('register');
+});
 
 
 Route::group(['prefix'=>'auth'], function(){
@@ -59,6 +63,7 @@ Route::group(['middleware'=>'auth'], function(){
     Route::group(['prefix'=>'posts'], function(){
        Route::get('/new',[AdminController::class, 'newPosts'])->name('posts.new');
        Route::get('/', [AdminController::class, 'Posts'])->name('posts');
+       Route::get('/template/edit/{id}', [AdminController::class, 'editPostTemplate'])->name('posts.template.edit');
        Route::get('/edit/{id}', [AdminController::class, 'editPost'])->name('posts.edit');
     });
 });

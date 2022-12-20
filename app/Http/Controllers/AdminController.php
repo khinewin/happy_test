@@ -26,6 +26,10 @@ class AdminController extends Controller
     public function posts(){
         return view('posts.all');
     }
+    public function editPostTemplate($id){
+        $post=Post::whereId($id)->firstOrFail();
+        return view('posts.edit-template')->with(['post'=>$post]);
+    }
     public function editPost($id){
         $post=Post::whereId($id)->firstOrFail();
         return view('posts.edit')->with(['post'=>$post]);

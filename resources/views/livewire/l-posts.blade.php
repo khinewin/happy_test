@@ -45,7 +45,8 @@
                                 <td>{{$p->created_at->diffForHumans()}}</td>
                                 <td>
                                     <a href="{{route('posts.edit', ['id'=>$p->id])}}" class="btn btn-sm btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>
-                                    <a href="#!" class="btn btn-sm btn-info" wire:click="changeReady({{$p->id}})"><i class="fa-solid fa-eye"></i></a>
+                                    <a href="{{route('posts.template.edit', ['id'=>$p->id])}}" class="btn btn-sm btn-primary"><i class="fa-solid fa-gears"></i></a>
+                                    <a href="#!" class="btn btn-sm btn-primary" wire:click="changeReady({{$p->id}})"><i class="fa-solid fa-eye"></i></a>
                                     <a href="#!" class="btn btn-sm btn-danger" wire:click="deletePost({{$p->id}})"><i class="fa-solid fa-trash"></i></a>
                                 </td>
                             </tr>

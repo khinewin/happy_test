@@ -3,6 +3,6 @@
 
 @section('content')
 
-@livewire('l-editposttitle', ['post'=>$post])
+@livewire('l-editpost', ['post'=>$post])
 
 @stop
