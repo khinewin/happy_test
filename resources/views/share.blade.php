@@ -8,7 +8,7 @@
     <meta property="og:url"                content="http://test.mmdata.cc/show/post/{{$share->post_id}}" />
     <meta property="og:type"               content="article" />
     <meta property="og:title"              content="{{$share->share_name}}" />
-    <meta property="og:description"        content="{{$share->post_content}}" />
+    <meta property="og:description"        content="{{$share->share_name}}" />
     <meta property="og:image"              content= "https://test.mmdata.cc/items/{{$share->post_img}}" />
     
     <title>@if($share->share_name){{$share->share_name}} @else {{$share->post_content}} @endif</title>
