@@ -32,12 +32,12 @@ return [
     'google' => [
         'client_id' => env('GOOGLE_CLIENT_ID'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-        'redirect' => 'https://byawparsayme.me/auth/google/callback',
+        'redirect' => 'https://happy.mmdata.cc/auth/google/callback',
     ],
     'facebook' => [
         'client_id' => env('FACEBOOK_CLIENT_ID'),
         'client_secret' => env('FACEBOOK_CLIENT_SECRET'),
-        'redirect' => 'https://byawparsayme.me/auth/facebook/callback',
+        'redirect' => 'https://happy.mmdata.cc/auth/facebook/callback',
     ],
 
 ];
