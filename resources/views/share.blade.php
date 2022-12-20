@@ -1,4 +1,4 @@
-
+{{--
 <!DOCTYPE html>
 <html lang="en">
 <head prefix="og: http://ogp.me/ns#">
@@ -17,13 +17,16 @@
     <link rel="canonical" href="{{url()->current()}}"/>
 
     <title>{{$share->share_name}}</title>
-   {{-- <title>@if($share->share_name){{$share->share_name}} @else {{$share->post_content}} @endif</title> --}}
     <link rel="stylesheet" href="{{URL::to('bst/css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{URL::to('fa/css/all.css')}}">
 </head>
 <body>
     @include('partials.navbar')
- 
+    --}}
+
+    @extends('layouts.app')
+    @section('title', {{$share->share_name}})
+ @section('content')
     <div class="container mt-2">
         <div class="row justify-content-center">
             <div class="col-sm-6">
@@ -46,12 +49,12 @@
         </div>
     </div>
 
-   
-
+   @stop
+{{--
 <script src="{{URL::to('bst/js/popper.js')}}"></script>
 <script src="{{URL::to('bst/js/bootstrap.js')}}"></script>
 
 
 </body>
 </html>
-
+--}}
