@@ -27,9 +27,10 @@
                     <div class="card-footer">
                         <div class="d-grid gap-2">
 
-                               <a target="_blank" class="btn btn-primary mb-2 btn-lg" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhappy.mmdata.cc%2Fshow%2Fpost%2F{{$share->post_id}}&amp;src=sdkpreparse">Share On Facebook</a>
 
-                               <a href="{{route('post.show',['id'=>$share->post_id])}}"  wire:model="doRetry" class="btn btn-primary btn-lg mb-2" >Back</a>
+                               <a href="{{route('post.show',['id'=>$share->post_id])}}"  wire:model="doRetry" class="btn btn-primary btn-lg mb-2" ><i class="fa-solid fa-repeat"></i> Retry</a>
+                               <a target="_blank" class="btn btn-primary mb-2 btn-lg" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhappy.mmdata.cc%2Fshare%2F{{$share->post_id}}%2F{{$share->share_id}}%2F{{$share->post_img}}&amp;src=sdkpreparse"><i class="fa-brands fa-facebook"></i> Share On Facebook</a>
+                               <a class="btn btn-primary mb-2 btn-lg" href="{{route('/')}}"><i class="fa-solid fa-house"></i> Home</a>
 
                             </div>
                     </div>

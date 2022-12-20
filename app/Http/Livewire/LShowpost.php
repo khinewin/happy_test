@@ -17,7 +17,6 @@ class LShowpost extends Component
     
 
     public function doRetry(){
-        dd("ok");
         $items=Postitem::where('post_id', '=', $this->post_id)->get();
         $item_count=count($items);
         $this->item_count=$item_count;

@@ -57,6 +57,9 @@ class HomeController extends Controller
     }
     
     public function showPost(Request $request){
+        if(!Auth::User()){
+            return redirect()->route('facebook.login');
+        }
         $id=$request->id;
         $hash_id=date('dmyhis').$id;
        $post=Post::whereId($id)->first(); 
