@@ -23,6 +23,6 @@
     <script src="{{URL::to('bst/js/popper.js')}}"></script>
     <script src="{{URL::to('bst/js/bootstrap.js')}}"></script>
     @livewireScripts
-    
+   
 </body>
 </html>

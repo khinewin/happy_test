@@ -8,10 +8,11 @@
        
           
           <ul class="navbar-nav ms-auto">
+            
             @auth
             @if(Auth::user()->role=="Admin")
               <li class="nav-item">
-                <a href="{{route('dashboard')}}" class="nav-link"> Dashboard </a>
+                <a href="{{route('dashboard')}}" class="nav-link"> <i class="fa-solid fa-table-columns"></i> Dashboard </a>
               </li>
             @endif
             <li class="nav-item dropdown">
