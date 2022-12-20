@@ -13,7 +13,7 @@
     <meta property="og:description"        content="{!! htmlspecialchars($share->share_name) !!}" />
     <meta property="og:image"              content= "https://happy.mmdata.cc/items/{{$share->post_img}}" />
     <meta property="fb:app_id" content="671829351269589"/>
-
+    <title>{{$share->share_name}}</title>
    {{-- <title>@if($share->share_name){{$share->share_name}} @else {{$share->post_content}} @endif</title> --}}
     <link rel="stylesheet" href="{{URL::to('bst/css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{URL::to('fa/css/all.css')}}">
