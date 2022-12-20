@@ -26,7 +26,6 @@
     <div class="container mt-2">
         <div class="row justify-content-center">
             <div class="col-sm-6">
-                <h1 class="card-title">{{$share->share_name}}</h1>
                 <div class="card shadow">
                     <div class="card-body">
                         <img src="{{URL::to('items/'.$share->post_img)}}" class="img-fluid">
