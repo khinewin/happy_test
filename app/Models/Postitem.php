@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Postitem extends Model
 {
     use HasFactory;
+    public function post(){
+        return $this->belongsTo('App\Models\Post');
+    }
 }

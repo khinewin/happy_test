@@ -2,11 +2,17 @@
     <div class="container mt-2">
         <div class="row justify-content-center">
             <div class="col-sm-6">
-
-                <div class="card shadow">
-                    <span style="position: absolute; top: 2px; left: 5px;" wire:loading>Loading...</span>
- 
+                <div class="card">
                     <div class="card-body">
+                        <div class="card-text text-center">
+                            <span>{{$item->post->title}}</span>
+                    </div>
+                    </div>
+                </div>
+                <div class="card shadow">
+                    
+                    <div class="card-body">
+                        
                         @if($item_count >=1)
                         <img src="{{URL::to('items/'.$item->item_name)}}" class="img-fluid" alt="{{$item->item_name}}">
                         @endif

