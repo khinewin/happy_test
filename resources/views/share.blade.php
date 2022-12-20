@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
+    <meta property="og:type"               content="article" />
+    <meta property="og:url"                content="http://happy.mmdata.cc/share/{{$share->post_id}}/{{$share->share_id}}/{{$share->img_id}}/" />
 
     <meta property="og:title"              content="{{$share->share_name}}" />
-    <meta property="og:url"                content="http://happy.mmdata.cc/share/{{$share->post_id}}/{{$share->share_id}}/{{$share->img_id}}/" />
-    <meta property="og:type"               content="article" />
-    <meta property="og:description"        content="THis is my desc" />
+    <meta property="og:description"        content="{{$share->share_name}}" />
     <meta property="og:image"              content= "https://happy.mmdata.cc/items/{{$share->post_img}}" />
     <meta property="fb:app_id" content="671829351269589"/>
 
@@ -20,6 +20,7 @@
 </head>
 <body>
     @include('partials.navbar')
+ 
     <div class="container mt-2">
         <div class="row justify-content-center">
             <div class="col-sm-6">
@@ -41,6 +42,8 @@
             </div>
         </div>
     </div>
+
+   
 
 <script src="{{URL::to('bst/js/popper.js')}}"></script>
 <script src="{{URL::to('bst/js/bootstrap.js')}}"></script>
