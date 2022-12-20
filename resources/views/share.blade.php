@@ -25,7 +25,7 @@
     --}}
 
     @extends('layouts.app')
-    @section('title', "{{$share->share_name}}")
+    @section('title') @if($share->share_name) {{$share->share_name}} @else {{$share->post_content}} @endif @stop
  @section('content')
     <div class="container mt-2">
         <div class="row justify-content-center">
