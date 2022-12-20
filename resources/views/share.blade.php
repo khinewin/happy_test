@@ -1,4 +1,3 @@
-{{--
 <!DOCTYPE html>
 <html lang="en">
 <head prefix="og: http://ogp.me/ns#">
@@ -22,11 +21,7 @@
 </head>
 <body>
     @include('partials.navbar')
-    --}}
-
-    @extends('layouts.app')
-    @section('title') @if($share->s_data) {{$share->s_data}} @else {{$share->post_content}} @endif @stop
- @section('content')
+ 
     <div class="container mt-2">
         <div class="row justify-content-center">
             <div class="col-sm-6">
@@ -49,12 +44,4 @@
         </div>
     </div>
 
-   @stop
-{{--
-<script src="{{URL::to('bst/js/popper.js')}}"></script>
-<script src="{{URL::to('bst/js/bootstrap.js')}}"></script>
-
-
-</body>
-</html>
---}}
+   
