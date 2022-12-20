@@ -9,9 +9,9 @@
     <div class="container mt-2">
         <div class="row">
            @foreach($posts as $p)
-            <div class="col-sm-4 mt-2">
+            <div class="col-sm-3 mt-2">
                 <div class="card shadow">
-                    <a href="{{route('post.show', ['id'=>$p->id])}}">
+                    <a href="{{URL::to("/show/post/$p->id")}}" style="text-decoration:none">
                         <div class="card-body">
                             <img src="{{URL::to('contents/'.$p->content)}}" class="img-fluid" alt="{{$p->title}}">
                             <p class="mt-2">{{$p->title}}</p>

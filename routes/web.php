@@ -18,6 +18,12 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class,'welcome'])->name("/");
 
+
+
+Route::get('/show/post/{id}/{hash_ran?}', [HomeController::class, 'showPost'])->name('post.show');
+Route::get('/save/for/share/{post_id?}/{hash_id?}/{post_img?}',[HomeController::class, 'saveForShare']);
+
+
 Route::get('/logout', function(){
     Auth::logout();
     return redirect()->route("/");
@@ -33,7 +39,6 @@ Route::group(['prefix'=>'admin'], function(){
     ])->name('login');
 });
 
-    Route::get('/show/post/{id}', [HomeController::class, 'showPost'])->name('post.show');
 
 
 Route::group(['prefix'=>'auth'], function(){

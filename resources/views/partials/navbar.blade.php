@@ -6,9 +6,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
        
-            <form class="ms-auto" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          </form>
+          
           <ul class="navbar-nav ms-auto">
             @auth
             @if(Auth::user()->role=="Admin")
@@ -28,9 +26,7 @@
     
                 
             @else
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('facebook.login')}}"><i class="fa-solid fa-right-to-bracket"></i></a>
-            </li>
+           
             @endif
           </ul>
       </div>

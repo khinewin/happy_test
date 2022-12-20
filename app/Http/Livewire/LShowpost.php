@@ -8,21 +8,21 @@ use App\Models\Post;
 use Session;
 class LShowpost extends Component
 {
-        public $item, $post_id;
+        public $item, $post_id, $hash_id;
      public  $item_count;
     public function mount($id){
         $this->post_id=$id;
+        $this->hash_id=date('dmyhis').$id;
     }
     
 
     public function doRetry(){
+        dd("ok");
         $items=Postitem::where('post_id', '=', $this->post_id)->get();
-        dd($items);
         $item_count=count($items);
         $this->item_count=$item_count;
         if($item_count >=1){
             $this->item=$items->random(1)->first();
-            session()->flash('img', $this->item->post_item);
         }
        
     }
@@ -34,19 +34,11 @@ class LShowpost extends Component
         $this->item_count=$item_count;
         if($item_count >=1){
             $this->item=$items->random(1)->first();
-            session()->flash('img', $this->item->post_item);
-        }
-        $get_posts=Post::OrderBy('id','desc')->where('ready', '=', true)->paginate(10);
-        $count=count($get_posts);
-        if($count >= 10){
-            $posts=$get_posts->random(10);
-        }else{
-            $posts=$get_posts;
-
         }
         
-        return view('livewire.l-showpost')->extends('show')->section('my_title', 'Byaw')
-        ->section('my_content')->section('post_id', $this->post_id)->section('img', $this->item->post_item);
+      
+        
+        return view('livewire.l-showpost');
     }
     
 }
