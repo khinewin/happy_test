@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-    <meta property="og:type" content="website" />
     <meta property="og:url"                content="http://happy.mmdata.cc/share/{{$share->post_id}}/{{$share->share_id}}/{{$share->img_id}}" />
+    <meta property="og:type"               content="article" />
     <meta property="og:title"              content="{{$share->share_name}}" />
-    <meta property="og:description"        content="@if($share->share_name){{$share->share_name}}@else {{$share->post_content}} @endif" />
+    <meta property="og:description"        content="{{$share->share_name}}" />
     <meta property="og:image"              content= "https://happy.mmdata.cc/items/{{$share->post_img}}" />
     
     <title>@if($share->share_name){{$share->share_name}} @else {{$share->post_content}} @endif</title>
