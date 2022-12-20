@@ -7,15 +7,14 @@
     
     <meta property="og:type"               content="article" />
     <meta property="og:url"                content="http://happy.mmdata.cc/share/{{$share->post_id}}/{{$share->share_id}}/{{$share->img_id}}/" />
-    <meta name="keywords" content="{{$share->share_name}}">
-    <meta property="og:site_name" content={{$share->share_name}}/>
-    <meta property="og:title"              content={!! htmlspecialchars($share->share_name)!!} />
-    <meta property="og:description"        content="{!! htmlspecialchars($share->share_name) !!}" />
+    <meta name="keywords" content="{{$share->post_content}}">
+    <meta property="og:title"              content={!! htmlspecialchars($share->post_content)!!} />
+    <meta property="og:description"        content="{!! htmlspecialchars($share->post_content) !!}" />
     <meta property="og:image"              content= "https://happy.mmdata.cc/items/{{$share->post_img}}" />
     <meta property="fb:app_id" content="671829351269589"/>
     <link rel="canonical" href="{{url()->current()}}"/>
 
-    <title>{{$share->share_name}}</title>
+    <title>{{$share->post_content}}</title>
     <link rel="stylesheet" href="{{URL::to('bst/css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{URL::to('fa/css/all.css')}}">
 </head>
