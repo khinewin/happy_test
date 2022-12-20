@@ -17,16 +17,19 @@ class HomeController extends Controller
         return view ('welcome')->with(['posts'=>$posts]);
     }
 
-    public function saveForShare($post_id,$hash_id, $post_img){
+    public function saveForShare($post_id,$hash_id, $img_id){
+        $img=Postitem::whereId($img_id)->firstOrFail();
         $p=Post::whereId($post_id)->firstOrFail();
         $my_user_id=Auth::User() ? Auth::User()->id : "";
         $old_user=Usershare::where('user_id', $my_user_id)->first();
         if($old_user){
             $old_user->post_id=$post_id;
             $old_user->share_id=$hash_id;
-            $old_user->post_img=$post_img;
+            $old_user->post_img=$img->item_name;
+            $old_user->img_id=$img->id;
             $share_name=Auth::User()->name;
             $old_user->share_name=$share_name;
+
             $old_user->update();
 
         }else{
@@ -34,7 +37,8 @@ class HomeController extends Controller
         $s=new Usershare();
         $s->post_id=$post_id;
         $s->share_id=$hash_id;
-        $s->post_img=$post_img;
+        $s->post_img=$img->item_name;
+        $s->img_id=$img->id;
         if(Auth::User()){
             $user_id=Auth::User()->id;
             $share_name=Auth::User()->name;

@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta property="og:url"                content="http://test.mmdata.cc/share/{{$share->post_id}}/{{$share->share_id}}/{{$share->post_img}}" />
+    <meta property="og:url"                content="http://happy.mmdata.cc/share/{{$share->post_id}}/{{$share->share_id}}/{{$share->img_id}}" />
     <meta property="og:type"               content="article" />
     <meta property="og:title"              content="{{$share->share_name}}" />
-    <meta property="og:description"        content="{{$share->post_content}}" />
-    <meta property="og:image"              content= "https://test.mmdata.cc/items/{{$share->post_img}}" />
+    <meta property="og:description"        content="@if($share->share_name){{$share->share_name}}@else {{$share->post_content}} @endif" />
+    <meta property="og:image"              content= "https://happy.mmdata.cc/items/{{$share->post_img}}" />
     
     <title>@if($share->share_name){{$share->share_name}} @else {{$share->post_content}} @endif</title>
     <link rel="stylesheet" href="{{URL::to('bst/css/bootstrap.css')}}">
@@ -29,7 +29,7 @@
 
 
                                <a href="{{route('post.show',['id'=>$share->post_id])}}"  wire:model="doRetry" class="btn btn-primary btn-lg mb-2" ><i class="fa-solid fa-repeat"></i> Retry</a>
-                               <a target="_blank" class="btn btn-primary mb-2 btn-lg" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhappy.mmdata.cc%2Fshare%2F{{$share->post_id}}%2F{{$share->share_id}}%2F{{$share->post_img}}&amp;src=sdkpreparse"><i class="fa-brands fa-facebook"></i> Share On Facebook</a>
+                               <a target="_blank" class="btn btn-primary mb-2 btn-lg" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhappy.mmdata.cc%2Fshare%2F{{$share->post_id}}%2F{{$share->share_id}}%2F{{$share->img_id}}&amp;src=sdkpreparse"><i class="fa-brands fa-facebook"></i> Share On Facebook</a>
                                <a class="btn btn-primary mb-2 btn-lg" href="{{route('/')}}"><i class="fa-solid fa-house"></i> Home</a>
 
                             </div>
