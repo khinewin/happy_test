@@ -6,7 +6,9 @@ use Livewire\Component;
 use App\Models\Postitem;
 use App\Models\Post;
 use Session;
+use Auth;
 class LShowpost extends Component
+
 {
         public $item, $post_id, $hash_id;
      public  $item_count;
@@ -37,9 +39,13 @@ class LShowpost extends Component
       
         $posts=Post::inRandomOrder()->limit(12)->get();
        
-      
+        if(Auth::User()){
+            $share_name=Auth::User()->name;
+        }else{
+            $share_name="";
+        }
         
-        return view('livewire.l-showpost')->with(['posts'=>$posts]);
+        return view('livewire.l-showpost')->with(['posts'=>$posts, 'share_name'=>$share_name]);
     }
     
 }
