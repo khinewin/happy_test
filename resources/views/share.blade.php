@@ -59,7 +59,7 @@
             </div>
         </div>
     </div>
-
+    @include('partials.footer')
    
     <script src="{{URL::to('bst/js/popper.js')}}"></script>
     <script src="{{URL::to('bst/js/bootstrap.js')}}"></script>
