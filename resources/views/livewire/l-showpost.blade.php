@@ -21,7 +21,7 @@
                     <form action="{{URL::to("share/$post_id/$hash_id/$item->id")}}" method="get">
                     <div class="card-footer">
                         <div>
-                            <input type="text" placeholder="Enter your name" name="share_name" class="form-control">
+                            <input type="text" placeholder="Enter your name" required name="share_name" class="form-control">
                         </div>
                     </div>
                     <div class="card-footer">

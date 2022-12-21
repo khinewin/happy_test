@@ -7,7 +7,7 @@
 
     <title>ပျော်ပါစေ | @yield('title')</title>
 
-
+    <link rel="shortcut icon" href="{{URL::to('imgs/happy.png')}}" type="image/x-icon">
 
     <link rel="stylesheet" href="{{URL::to('bst/css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{URL::to('fa/css/all.css')}}">
