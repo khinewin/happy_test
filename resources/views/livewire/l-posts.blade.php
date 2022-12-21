@@ -31,7 +31,7 @@
                             <th>Status</th>
                             <th>User</th>
                             <th>Date</th>
-                            <th>Action</th>
+                            <th>Actions</th>
                         </tr>
                         @foreach($posts as $p)
                             <tr>
@@ -42,7 +42,7 @@
                                     @if($p->ready) <span class="text-success"><i class="fa-solid fa-eye"></i></span> @else <span class="text-danger"><i class="fa-sharp fa-solid fa-eye-slash"></i></span> @endif
                                 </td>
                                 <td>{{$p->user->name}}</td>
-                                <td>{{$p->created_at->diffForHumans()}}</td>
+                                <td>{{date('d-m-Y h:i A', strtotime($p->created_at))}}</td>
                                 <td>
                                     <a href="{{route('posts.edit', ['id'=>$p->id])}}" class="btn btn-sm btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>
                                     <a href="{{route('posts.template.edit', ['id'=>$p->id])}}" class="btn btn-sm btn-primary"><i class="fa-solid fa-gears"></i></a>
