@@ -14,8 +14,9 @@
                     <a href="{{URL::to("/show/post/$p->id")}}" style="text-decoration:none">
                         <div class="card-body">
                             <img src="{{URL::to('contents/'.$p->content)}}" class="img-fluid" alt="{{$p->title}}">
-                            <p class="mt-2">{{$p->title}}</p>
+                            <span  style="position: absolute; bottom: 10px; left: 5px; right: 5px;">{{{ $p->title }}}</span>
                         </div>
+                        
                     </a>
                 </div>
             </div>
