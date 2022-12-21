@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     <meta property="og:type"               content="article" />
-    <meta property="og:url"                content="{{url()->current()}}?share_name={{$share_name}}/" />
+    <meta property="og:url"                content="{{url()->current()}}?share_name={{$share_name}}" />
     <meta property="og:title"              content="{{$share_name}}" />
     <meta property="og:description"        content="ပျော်ရွှင်စရာကောင်းသော အချိန်လေးပိုင်ဆိုင်နိုင်ကြပါစေ။" />
     <meta property="og:image"              content= "https://happy.mmdata.cc/items/{{$share->post_img}}" />
