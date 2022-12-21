@@ -5,7 +5,7 @@
         <div class="col-sm-2">
             @include('partials.sidebar')
         </div>
-        <div class="col-sm-10 shadow" style="height: 100vh">
+        <div class="col-sm-10 shadow" style="min-height: 100vh">
             <div class="row">
                 <div class="col-sm-12">
                     <h2>Edit Post</h2>
