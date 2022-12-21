@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Postitem;
 use App\Models\Usershare;
+use Session;
 
 use Auth;
 
@@ -93,7 +94,10 @@ class HomeController extends Controller
     }
     
     public function showPost(Request $request){
+        $url=url()->current();
+       
        if(!Auth::User()){
+            Session::put('my_url', $url);
             return redirect()->route("facebook.login");
        }
         $id=$request->id;

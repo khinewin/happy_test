@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Laravel\Socialite\Facades\Socialite;
 use App\Models\User;
 use Auth;
+use Session;
 
 class AuthController extends Controller
 {
@@ -32,7 +33,7 @@ class AuthController extends Controller
          
                 Auth::login($finduser);
        
-                return redirect()->route("/");
+                return redirect(Session::get('my_url'));
          
             }else{
 
@@ -46,7 +47,7 @@ class AuthController extends Controller
         
                 Auth::login($newUser);
         
-                return redirect()->route("/");
+                return redirect(Session::get('my_url'));
             }
        
         } catch (Exception $e) {
