@@ -28,7 +28,7 @@
                             <th>Title</th>
 
                             <th>Content</th>
-                            <th>Ready</th>
+                            <th>Status</th>
                             <th>User</th>
                             <th>Date</th>
                             <th>Action</th>

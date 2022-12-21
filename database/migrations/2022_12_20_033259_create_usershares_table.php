@@ -23,6 +23,7 @@ class CreateUsersharesTable extends Migration
             $table->integer('user_id')->nullable();
             $table->text('post_content')->nullable();
             $table->integer('img_id')->nullable();
+            $table->text('post_ans')->nullable();
         });
     }
 

@@ -10,16 +10,18 @@ use Auth;
 class LEditposttitle extends Component
 {
     use WithFileUploads;
-    public $title, $content, $post;
+    public $title, $content, $post, $ans;
     public function mount($post){
         $this->post=$post;
         $this->title=$post->title;
+        $this->ans=$post->ans;
     }
     public function updatePost(){      
         
 
         $p= Post::whereId($this->post->id)->firstOrFail();
         $p->title=$this->title;
+        $p->ans=$this->ans;
         $p->user_id=Auth::user()->id;
         
         if($this->content){

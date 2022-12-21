@@ -44,6 +44,7 @@ class HomeController extends Controller
         }
         
         $s->post_content=$p->title;
+        $s->post_ans=$p->ans;
         $s->save();
         }
         return view('share')->with(['share'=>$s, 'share_name'=>$share_name]);

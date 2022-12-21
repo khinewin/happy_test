@@ -10,11 +10,12 @@ use Livewire\WithFileUploads;
 class LNewpost extends Component
 {
     use WithFileUploads;
-    public $title, $content;
+    public $title, $content, $ans;
 
     protected $rules = [
         'title'=>'required',
         'content' => 'required|image|max:1024',
+        'ans'=>'required'
        ];
 
     public function updated()
@@ -31,6 +32,7 @@ class LNewpost extends Component
 
         $p=new Post();
         $p->title=$this->title;
+        $p->ans=$this->ans;
         $p->user_id=Auth::user()->id;
         $p->content=$file_name;
         $p->save();
@@ -39,6 +41,7 @@ class LNewpost extends Component
 
         $this->title="";
         $this->content="";
+        $this->ans="";
 
     }
 

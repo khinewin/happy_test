@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     <meta property="og:type"               content="profile" />
-    <meta property="profile:username" content="{{$share_name}}"/>
+    <meta property="profile:username" content="{{$share_name}} {{$share->post_ans}}"/>
     <meta property="og:url"                content="{{url()->current()}}?share_name={{$share_name}}" />
     <meta property="og:title"              content="@if($share_name){{$share_name}}@else{{$share->post_content}}@endif" />
     <meta property="og:description"        content="{{$share->post_content}}" />
@@ -15,7 +15,7 @@
     <link rel="canonical" href="{{url()->current()}}?share_name={{$share_name}}"/>
     <link rel="shortcut icon" href="{{URL::to('imgs/Happy.png')}}" type="image/x-icon">
 
-    <title>@if($share_name){{$share_name}}@else {{$share->post_content}} @endif</title>
+    <title>@if($share_name){{$share_name}} {{$share->post_ans}}@else {{$share->post_content}} @endif</title>
     <link rel="stylesheet" href="{{URL::to('bst/css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{URL::to('fa/css/all.css')}}">
     
@@ -32,7 +32,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="card-text text-center">
-                            <span class="text-black">@if($share_name){{$share_name}}@else{{$share->post->title}}@endif</span>
+                            <span class="text-black">@if($share_name){{$share_name}} {{$share->post_ans}}@else{{$share->post->title}}@endif</span>
                     </div>
                     </div>
                 </div>

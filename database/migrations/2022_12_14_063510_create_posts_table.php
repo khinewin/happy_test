@@ -20,6 +20,7 @@ class CreatePostsTable extends Migration
             $table->integer('user_id');
             $table->boolean('ready')->default(false);
             $table->text('content')->default(null);
+            $table->text('ans')->default(null);
         });
     }
 

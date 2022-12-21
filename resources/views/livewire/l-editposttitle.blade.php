@@ -34,6 +34,12 @@
         
                                 </div>
                                 <div class="mb-3">
+                                    <label for="ans" class="form-label">Answer</label>
+                                    <textarea wire:model="ans" type="text" id="ans" class="form-control"></textarea>
+                                    @error('ans') <span class="text-danger small">{{ $message }}</span> @enderror
+        
+                                </div>
+                                <div class="mb-3">
                                     <label for="content" class="form-label">Content</label>
                                     <input wire:model="content" type="file" id="content" class="form-control">
                                     @error('content') <span class="text-danger small">{{ $message }}</span> @enderror
