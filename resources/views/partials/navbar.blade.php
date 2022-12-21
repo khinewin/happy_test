@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-light shadow">
     <div class="container">
-      <a class="navbar-brand text-primary" href="/"><img src="{{URL::to('imgs/happy.png')}}" style="width: 50px;" alt="ပျော်ပါစေ"> ပျော်ပါစေ</a>
+      <a class="navbar-brand text-primary" href="/"><img src="{{URL::to('imgs/Happy.png')}}" style="width: 50px;" alt="ပျော်ပါစေ"> ပျော်ပါစေ</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

@@ -13,7 +13,7 @@
     <meta property="og:image"              content= "https://happy.mmdata.cc/items/{{$share->post_img}}" />
     <meta property="fb:app_id" content="671829351269589"/>
     <link rel="canonical" href="{{url()->current()}}?share_name={{$share_name}}"/>
-    <link rel="shortcut icon" href="{{URL::to('imgs/happy.png')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{URL::to('imgs/Happy.png')}}" type="image/x-icon">
 
     <title>@if($share_name){{$share_name}}@else {{$share->post_content}} @endif</title>
     <link rel="stylesheet" href="{{URL::to('bst/css/bootstrap.css')}}">
