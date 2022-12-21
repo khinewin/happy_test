@@ -32,7 +32,7 @@ class AuthController extends Controller
          
                 Auth::login($finduser);
        
-                return redirect(url()->previous());
+                return redirect()->route("/");
          
             }else{
 
@@ -46,7 +46,7 @@ class AuthController extends Controller
         
                 Auth::login($newUser);
         
-                return redirect(url()->previous());
+                return redirect()->route("/");
             }
        
         } catch (Exception $e) {
