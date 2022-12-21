@@ -19,7 +19,7 @@
 
     @yield('content')
     
-
+    @include('partials.footer')
     <script src="{{URL::to('bst/js/popper.js')}}"></script>
     <script src="{{URL::to('bst/js/bootstrap.js')}}"></script>
     @livewireScripts
