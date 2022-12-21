@@ -12,6 +12,15 @@
     <link rel="stylesheet" href="{{URL::to('bst/css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{URL::to('fa/css/all.css')}}">
     @livewireStyles
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EGRZ5FYWB3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EGRZ5FYWB3');
+</script>
 </head>
 <body>
     
