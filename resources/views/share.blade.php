@@ -8,7 +8,7 @@
     <meta property="og:type"               content="profile" />
     <meta property="profile:username" content="{{$share_name}} {{$share->post_ans}}"/>
     <meta property="og:url"                content="{{url()->current()}}?share_name={{$share_name}}" />
-    <meta property="og:title"              content="@if($share_name){{$share_name}}@else{{$share->post_content}}@endif" />
+    <meta property="og:title"              content="@if($share_name){{$share_name}} {{$share->post_ans}}@else{{$share->post_content}}@endif" />
     <meta property="og:description"        content="{{$share->post_content}}" />
     <meta property="og:image"              content= "https://happy.mmdata.cc/items/{{$share->post_img}}" />
     <meta property="fb:app_id" content="671829351269589"/>
