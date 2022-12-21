@@ -32,7 +32,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="card-text text-center">
-                            <span class="text-black">@if($share_name){{$share_name}} {{$share->post_ans}}@else{{$share->post->title}}@endif</span>
+                            <span class="text-black">@if($share_name)<b>"{{$share_name}}"</b> {{$share->post_ans}}@else{{$share->post->title}}@endif</span>
                     </div>
                     </div>
                 </div>
