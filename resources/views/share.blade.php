@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-    <meta property="og:type"               content="article" />
+    <meta property="og:type"               content="profile" />
+    <meta property="profile:username" content="{{$share_name}}"/>
     <meta property="og:url"                content="{{url()->current()}}?share_name={{$share_name}}" />
     <meta property="og:title"              content="@if($share_name){{$share_name}}@else{{$share->post_content}}@endif" />
     <meta property="og:description"        content="ပျော်ရွှင်စရာကောင်းသော အချိန်လေးပိုင်ဆိုင်နိုင်ကြပါစေ။" />
