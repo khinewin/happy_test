@@ -34,10 +34,12 @@ class LShowpost extends Component
         if($item_count >=1){
             $this->item=$items->random(1)->first();
         }
-        
+      
+        $posts=Post::inRandomOrder()->limit(12)->get();
+       
       
         
-        return view('livewire.l-showpost');
+        return view('livewire.l-showpost')->with(['posts'=>$posts]);
     }
     
 }

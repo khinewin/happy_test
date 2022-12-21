@@ -38,6 +38,30 @@
                 </form>
                 </div>
             </div>
+            <div class="col-sm-12 mt-2">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <div class="card-title">Posts you may like</div>
+                        <div class="row">
+                            @foreach($posts as $p)
+                             <div class="col-sm-3 mt-2">
+                                 <div class="card shadow">
+                                     <a href="{{URL::to("/show/post/$p->id")}}" style="text-decoration:none">
+                                         <div class="card-body">
+                                             <img src="{{URL::to('contents/'.$p->content)}}" class="img-fluid" alt="{{$p->title}}">
+                                             <span >{{{ $p->title }}}</span>
+                                         </div>
+                                         
+                                     </a>
+                                 </div>
+                             </div>
+                            @endforeach
+                         </div>
+                         
+                    </div>
+                </div>
+                 
+            </div>
 
         </div>
 </div>
