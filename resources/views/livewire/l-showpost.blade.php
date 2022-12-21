@@ -26,9 +26,9 @@
                     </div>
                     <div class="card-footer">
                         <div class="d-grid gap-2">
-                                <a href="#!" wire:click="doRetry" class="btn btn-primary btn-lg mb-2" ><i class="fa-solid fa-repeat"></i> Retry</a>
                              {{--   <a href="{{URL::to("share/$post_id/$hash_id/$item->id")}}"   class="btn btn-primary btn-lg mb-2" ><i class="fa-brands fa-facebook"></i> Save For Share</a> --}}
                              <button type="submit"  class="btn btn-primary btn-lg mb-2"><i class="fa-brands fa-facebook"></i> Save For Share</button>
+                             <a href="#!" wire:click="doRetry" class="btn btn-primary btn-lg mb-2" ><i class="fa-solid fa-repeat"></i> Retry</a>
 
                                 <a class="btn btn-primary mb-2 btn-lg" href="{{route('/')}}"><i class="fa-solid fa-house"></i> Home</a>
 
