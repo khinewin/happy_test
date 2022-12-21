@@ -37,7 +37,15 @@
  
     <div class="container mt-2">
         <div class="row justify-content-center">
+           
             <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-text text-center">
+                            <span class="text-danger">အောက်တွင်အခြားလူနာမည်ပေါ်နေပါက Retry ကိုနှိပ်ပြီး သင့်နာမည်ကိုထည့်သွင်းနိုင်ပါသည်။</span>
+                    </div>
+                    </div>
+                </div>
                 <div class="card">
                     <div class="card-body">
                         <div class="card-text text-center">

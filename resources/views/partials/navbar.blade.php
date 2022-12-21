@@ -6,7 +6,8 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
        
-          
+        
+  
           <ul class="navbar-nav ms-auto">
             
             @auth
