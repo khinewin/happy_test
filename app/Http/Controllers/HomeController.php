@@ -17,7 +17,8 @@ class HomeController extends Controller
         return view ('welcome')->with(['posts'=>$posts]);
     }
 
-    public function saveForShare($post_id,$hash_id, $img_id){
+    public function saveForShare($post_id,$hash_id, $img_id, Request $request){
+        $share_name=$request->share_name;
         $img=Postitem::whereId($img_id)->first();
         $p=Post::whereId($post_id)->first();
         if(!$p){
@@ -45,7 +46,7 @@ class HomeController extends Controller
         $s->post_content=$p->title;
         $s->save();
         }
-        return view('share')->with(['share'=>$s]);
+        return view('share')->with(['share'=>$s, 'share_name'=>$share_name]);
 
 
         /*

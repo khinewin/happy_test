@@ -21,7 +21,7 @@ Route::get('/', [HomeController::class,'welcome'])->name("/");
 
 
 Route::get('/show/post/{id}/{hash_ran?}', [HomeController::class, 'showPost'])->name('post.show');
-Route::get('/share/{post_id?}/{hash_id?}/{post_img?}',[HomeController::class, 'saveForShare']);
+Route::get('/share/{post_id?}/{hash_id?}/{post_img?}/{share_name?}',[HomeController::class, 'saveForShare']);
 
 
 Route::get('/logout', function(){

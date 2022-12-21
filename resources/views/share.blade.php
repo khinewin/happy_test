@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     <meta property="og:type"               content="article" />
-    <meta property="og:url"                content="http://happy.mmdata.cc/share/{{$share->post_id}}/{{$share->share_id}}/{{$share->img_id}}/" />
-    <meta property="og:title"              content="{{$share->post_content}}" />
+    <meta property="og:url"                content="{{url()->current()}}?share_name={{$share_name}}/" />
+    <meta property="og:title"              content="{{$share_name}}" />
     <meta property="og:description"        content="ပျော်ရွှင်စရာကောင်းသော အချိန်လေးပိုင်ဆိုင်နိုင်ကြပါစေ။" />
     <meta property="og:image"              content= "https://happy.mmdata.cc/items/{{$share->post_img}}" />
     <meta property="fb:app_id" content="671829351269589"/>
-    <link rel="canonical" href="{{url()->current()}}"/>
+    <link rel="canonical" href="{{url()->current()}}?share_name={{$share_name}}"/>
 
-    <title>{{$share->post_content}}</title>
+    <title>{{$share_name}}</title>
     <link rel="stylesheet" href="{{URL::to('bst/css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{URL::to('fa/css/all.css')}}">
     
@@ -53,9 +53,9 @@
    
     <script src="{{URL::to('bst/js/popper.js')}}"></script>
     <script src="{{URL::to('bst/js/bootstrap.js')}}"></script>
- 
+    {{--
     <script>(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('gloaphoo.net',5596069,document.createElement('script'))</script>
-  
+    --}}
     @livewireScripts
    
 </body>
