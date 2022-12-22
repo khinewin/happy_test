@@ -107,5 +107,8 @@ class HomeController extends Controller
         }
        return view('show')->with(['post'=>$post]);
     }
+    public function dataDeletion(){
+        return view('data-deletion');
+    }
     
 }

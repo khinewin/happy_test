@@ -18,7 +18,7 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class,'welcome'])->name("/");
 
-
+Route::get('/data-deletion-instruction', [HomeController::class, 'dataDeletion']);
 
 Route::get('/show/post/{id}/{hash_ran?}', [HomeController::class, 'showPost'])->name('post.show');
 Route::get('/share/{post_id?}/{hash_id?}/{post_img?}/{share_name?}',[HomeController::class, 'saveForShare']);
